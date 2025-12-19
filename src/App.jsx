@@ -41,11 +41,11 @@ const GlobalStyles = () => (
 const projectsData = [
   { 
     id: 0,
-    title: "RestoFlow OS", 
-    category: "SaaS B2B", 
+    title: "Hirabio", 
+    category: "Dev Web", 
     type: "dev", 
     year: "2025",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=1000&auto=format&fit=crop", 
+    image: "/Images/Couv1.png", 
     size: "normal",
     description: "Une interface de gestion de commandes (KDS) pour les cuisines de restaurants. Le défi était de créer une UI dense mais lisible, capable d'afficher des dizaines de commandes en temps réel sans lag.",
     stack: ["Vue.js", "Tailwind CSS", "Supabase", "WebSockets"],
@@ -201,11 +201,7 @@ const Navbar = ({ onHomeClick, isProjectOpen }) => (
   </nav>
 );
 
-/* ======================================================================================
-   LAYOUTS DES DÉTAILS DE PROJET
-   ====================================================================================== */
 
-// --- Layout DESIGN ---
 const DesignLayout = ({ project }) => (
   <div className="pt-32 pb-20 px-6 max-w-7xl mx-auto animate-fade-in-up">
     <div className="grid md:grid-cols-2 gap-16 mb-24">
@@ -596,4 +592,3 @@ const App = () => {
 };
 
 export default App;
-
