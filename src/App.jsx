@@ -3,7 +3,6 @@ import { Camera, Code, ArrowUpRight, Mail, Linkedin, Instagram, GraduationCap, C
 
 /* ======================================================================================
    STYLES GLOBAUX & ANIMATIONS
-   (Tout le CSS nécessaire est ici pour que ça marche direct)
    ====================================================================================== */
 const GlobalStyles = () => (
   <style>{`
@@ -41,99 +40,138 @@ const GlobalStyles = () => (
 const projectsData = [
   { 
     id: 0,
-    title: "Hirabio", 
+    title: "Motoria", 
     category: "Dev Web", 
     type: "dev", 
     year: "2025",
-    image: "/Images/Couv1.png", 
+    image: "/Images/projetdev1.png", 
     size: "normal",
-    description: "Une interface de gestion de commandes (KDS) pour les cuisines de restaurants. Le défi était de créer une UI dense mais lisible, capable d'afficher des dizaines de commandes en temps réel sans lag.",
-    stack: ["Vue.js", "Tailwind CSS", "Supabase", "WebSockets"],
-    link: "#",
-    features: ["Tableau de bord temps réel", "Drag & Drop (Kanban)", "Système de notifications sonores"]
+    description: "Conception d'une plateforme de suivi pédagogique pour auto-écoles. Développement Fullstack reposant sur une architecture REST robuste (API PHP/MySQL) et une interface dynamique en Angular pour gérer la progression des élèves en temps réel.",
+    stack: ["Angular", "Tailwind CSS", "PHP", "Methode REST", "SQL/XXAMP"],
+    link: "https://github.com/IbtissamCTI",
+    features: ["Navigation Immersive & Contextuelle (SPA)", "Architecture REST", "Gestion complexe de BDD relationnelle (SQL/MySQL)"],
+    gallery: [
+      "https://images.unsplash.com/photo-1580273916550-e323be2ed5d6?q=80&w=1000&auto=format&fit=crop", 
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1000&auto=format&fit=crop"
+    ]
   },
-  { 
-    id: 1, 
-    title: "Dashboard Analytics", 
-    category: "Fullstack App", 
+ { 
+    id: 1,
+    title: "Projet HARIBIO",
+    category: "Data Viz & Gestion", 
     type: "dev", 
-    year: "2025",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop", 
-    size: "large",
-    description: "Une interface d'administration moderne conçue entièrement avec les utilitaires Tailwind CSS. Ce projet démontre la puissance de Flexbox et Grid pour créer des mises en page réactives complexes sans CSS personnalisé.",
-    stack: ["React", "Tailwind CSS", "Vite", "Recharts"],
-    link: "#",
-    features: ["Mode Sombre/Clair", "Layout Grid Responsive", "Composants UI réutilisables"]
+    year: "2024",
+    image: "/Images/dev2.png", 
+    size: "normal",
+    description: "Site web de datavisualisation sur les biocontrôles agricoles. En tant que Cheffe d'équipe, j'ai piloté la transformation de données brutes (Excel/CSV) en graphiques interactifs pour sensibiliser aux alternatives écologiques.",
+    stack: ["JavaScript", "Chart.js", "D3.js", "Bootstrap"],
+    link: "https://github.com/IbtissamCTI/HARIBIO.git",
+    features: [
+      "Visualisation interactive de données (Graphes dynamiques)",
+      "Traitement et parsing de fichiers de données (CSV/Excel)",
+      "Pilotage d'équipe (4 pers.) et méthode Agile (Trello)"
+    ],
+    gallery: [
+      "/Images/dev22.png", 
+      "/Images/dev222.png"
+    ]
   },
   { 
     id: 2,
-    title: "Lumina Gallery", 
-    category: "Dev & Design", 
-    type: "dev", 
+    title: "Soda", 
+    category: "Packaging & Branding", 
+    type: "design", 
     year: "2024",
-    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop", 
+    image: "/Images/soda.png", 
     size: "normal", 
-    description: "Une galerie d'art virtuelle développée pour permettre aux artistes numériques d'exposer leurs œuvres dans un environnement 3D interactif. L'accent a été mis sur la performance WebGL et l'accessibilité.",
-    stack: ["React", "Three.js", "WebGL", "Tailwind"],
-    link: "https://github.com/user/lumina",
-    features: ["Navigation 3D fluide", "Backend CMS Strapi", "Mode VR expérimental"]
+    description: "Exercice de création d'une identité visuelle complète pour une marque de soda. Réalisation de l'affiche publicitaire et conception du mockup packaging.",
+    stack: ["InDesign", "Illustrator", "Photoshop"],
+    challenge: "Créer un visuel impactant et un mockup réaliste pour un produit de grande consommation.",
+    colors: ["#6c1721", "#356867", "#e2d85c"],
+    typo: "Display IBM PLEX / Sans Condensed",
+    gallery: [
+      "/Images/soda1.png",
+      "/Images/soda1.png"
+    ]
   },
   { 
     id: 3,
-    title: "Neon Souls", 
-    category: "Photographie", 
-    type: "photo", 
+    title: "guitar.exe", 
+    category: "Art Numérique", 
+    type: "design", 
     year: "2023",
-    image: "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?q=80&w=1000&auto=format&fit=crop", 
-    size: "normal",
-    description: "Une série nocturne capturant la solitude urbaine à travers les reflets des néons de Tokyo. Travail sur la colorimétrie et les contrastes forts.",
+    image: "/Images/exe.png", 
+    size: "normal", 
+    description: "Composition artistique réalisée à partir d'une photographie personnelle, éditée pour reprendre l'esthétique nostalgique d'une fenêtre Windows XP.",
+    stack: ["Photoshop", "Photographie"],
+    challenge: "Intégration réaliste d'éléments photographiques dans une interface graphique rétro.",
+    colors: ["#000080", "#C0C0C0", "#000000"],
+    typo: "Pixel Art / System",
     gallery: [
-      "https://images.unsplash.com/photo-1555680202-c86f0e12f086?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1565454695028-19e0b82f144d?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1534234828563-0279bc300c59?q=80&w=1000&auto=format&fit=crop"
-    ],
-    camera: "Sony A7III + 35mm f/1.4"
+      "/Images/exe.png"
+    ]
   },
   { 
     id: 4,
-    title: "Type Master", 
-    category: "Design UI/UX", 
+    title: "Cloone", 
+    category: "Publicité & Social Media", 
     type: "design", 
     year: "2023",
-    image: "https://images.unsplash.com/photo-1558655146-d09347e0b7a9?q=80&w=1000&auto=format&fit=crop", 
-    size: "normal",
-    description: "Refonte complète de l'identité visuelle d'une fonderie typographique indépendante. Création d'un système de design modulaire et d'une interface de test de police en temps réel.",
-    colors: ["#1a1a1a", "#e2e8f0", "#3b82f6"],
-    typo: "Inter / Playfair",
-    challenge: "Rendre l'achat de licences de polices intuitif tout en gardant une esthétique avant-gardiste."
+    image: "/Images/cloone.png", 
+    size: "large", 
+    description: "Projet SAE de 2ème année : Conception d'une affiche promotionnelle au format post Instagram pour une agence fictive de clonage.",
+    stack: ["Suite Adobe"],
+    challenge: "Créer un visuel accrocheur pour les réseaux sociaux autour d'un concept futuriste.",
+    colors: ["#b8351b", "#85a79b", "#FFFFFF"],
+    typo: "Futuristic / Experimental",
+    gallery: [
+      "/Images/POSTINSTA.png",
+      "/Images/POSTINSTA.png"
+    ]
   },
   { 
     id: 5,
-    title: "Ethereal Web", 
-    category: "Développement React", 
-    type: "dev", 
-    year: "2024",
-    image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1000&auto=format&fit=crop", 
+    title: "Models", 
+    category: "Photographie", 
+    type: "photo", 
+    year: "2023",
+    image: "/Images/photo.JPG", 
     size: "normal",
-    description: "Site vitrine expérimental utilisant des transitions de pages fluides et du scrolling asynchrone.",
-    stack: ["Next.js", "Framer Motion", "GSAP"],
-    link: "#",
-    features: ["Transitions FLIP", "Lazy Loading avancé", "SEO Optimisé"]
+    description: "Photos de models pour certaines occasions.",
+    gallery: [
+      "/Images/photo1.jpg",
+      "/Images/last.png",
+      "/Images/photoig.jpg",
+      "/Images/photo2.JPG",
+      "/Images/last1.jpg",
+      "/Images/photomodel.jpg",
+      "/Images/pic.jpg",
+
+
+
+
+
+    ],
+    camera: "Lumix hybrid/Canon 500D"
   },
   { 
     id: 6,
-    title: "Urban Silence", 
+    title: "A travers la lens", 
     category: "Photographie", 
     type: "photo", 
-    year: "2022",
-    image: "https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?q=80&w=1000&auto=format&fit=crop", 
+    year: "2022-2025",
+    image: "/Images/lens1.JPG", 
     size: "large",
-    description: "Exploration des espaces brutalistes abandonnés en banlieue parisienne.",
+    description: "À travers l'objectif, les géométries et formes qui nous entourent.",
     gallery: [
-      "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=1000&auto=format&fit=crop"
+      "/Images/lens3.JPG",
+      "/Images/lens2.JPG",
+      "/Images/lens4.JPG",
+      "/Images/lens5.JPG",
+      "/Images/lens1.JPG",
+  
     ],
-    camera: "Fujifilm X-T4"
+    camera: "Lumix hybrid/Canon 500D"
   },
 ];
 
@@ -191,7 +229,7 @@ const Navbar = ({ onHomeClick, isProjectOpen }) => (
       )}
 
       <a 
-        href="mailto:mon.email@etudiant.mmi.fr"
+        href="mailto:Ibtissem.chti@hotmail.com"
         className="flex items-center gap-2 px-5 py-2 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 hover:border-white/40 transition-all text-sm uppercase tracking-wider group backdrop-blur-sm"
       >
         <Mail className="w-4 h-4 text-blue-300 group-hover:text-white transition-colors" />
@@ -221,9 +259,10 @@ const DesignLayout = ({ project }) => (
          <div className="absolute -bottom-6 -left-6 bg-[#050A19] border border-white/10 p-6 max-w-xs">
             <h4 className="font-serif text-xl italic mb-2">Outils</h4>
             <div className="flex flex-wrap gap-2 text-xs text-slate-400">
-               <span className="border border-white/20 px-2 py-1">Figma</span>
-               <span className="border border-white/20 px-2 py-1">Illustrator</span>
-               <span className="border border-white/20 px-2 py-1">Protopie</span>
+               {/* Affichage dynamique des outils */}
+               {project.stack?.map((tool, i) => (
+                 <span key={i} className="border border-white/20 px-2 py-1">{tool}</span>
+               ))}
             </div>
          </div>
       </div>
@@ -247,8 +286,12 @@ const DesignLayout = ({ project }) => (
                 </div>
             </div>
         </div>
-        <div className="flex items-center justify-center border border-dashed border-white/20 text-slate-500 font-light italic">
-            [ Aperçu des maquettes UI ]
+        <div className="flex items-center justify-center border border-dashed border-white/20 text-slate-500 font-light italic overflow-hidden relative group">
+            {project.gallery && project.gallery[0] ? (
+              <img src={project.gallery[0]} alt="Aperçu" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
+            ) : (
+              <span>[ Aperçu des maquettes UI ]</span>
+            )}
         </div>
     </div>
   </div>
@@ -299,6 +342,7 @@ const DevLayout = ({ project }) => (
         </div>
 
         <div className="md:col-span-2 space-y-8">
+            {/* Image principale */}
             <div className="bg-slate-900 border border-white/10 p-2 rounded-lg">
                 <div className="flex gap-2 mb-2 px-2">
                     <div className="w-3 h-3 rounded-full bg-red-500/50"></div>
@@ -307,12 +351,22 @@ const DevLayout = ({ project }) => (
                 </div>
                 <img src={project.image} alt="Interface" className="w-full rounded border border-white/5 opacity-80" />
             </div>
+            
+            {/* Grille d'images supplémentaires */}
             <div className="grid grid-cols-2 gap-4">
-                 <div className="bg-slate-800/50 h-40 flex items-center justify-center border border-white/5 text-xs text-slate-500 font-mono">
-                    Snippet de code
+                 <div className="bg-slate-900 border border-white/10 p-2 rounded-lg h-64 relative overflow-hidden group">
+                    <img 
+                        src={project.gallery && project.gallery[0] ? project.gallery[0] : project.image} 
+                        alt="Detail 1" 
+                        className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500" 
+                    />
                  </div>
-                 <div className="bg-slate-800/50 h-40 flex items-center justify-center border border-white/5 text-xs text-slate-500 font-mono">
-                    Architecture DB
+                 <div className="bg-slate-900 border border-white/10 p-2 rounded-lg h-64 relative overflow-hidden group">
+                    <img 
+                        src={project.gallery && project.gallery[1] ? project.gallery[1] : project.image} 
+                        alt="Detail 2" 
+                        className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500" 
+                    />
                  </div>
             </div>
         </div>
@@ -344,8 +398,20 @@ const PhotoLayout = ({ project }) => (
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {project.gallery?.map((img, i) => (
-                <div key={i} className={`relative group overflow-hidden ${i % 3 === 0 ? 'md:col-span-2 aspect-[21/9]' : 'aspect-[4/5]'}`}>
-                    <img src={img} alt="" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 grayscale hover:grayscale-0" />
+                <div key={i} className={`relative group overflow-hidden ${
+                    // Modification ici pour le projet Models
+                    project.title === "Models" 
+                    ? 'aspect-[3/4]' // Format portrait standard pour les modèles
+                    : (i % 3 === 0 ? 'md:col-span-2 aspect-[21/9]' : 'aspect-[4/5]')
+                }`}>
+                    <img 
+                        src={img} 
+                        alt="" 
+                        className={`w-full h-full transition-transform duration-1000 group-hover:scale-105 grayscale hover:grayscale-0 ${
+                            // Modification ici : object-contain pour afficher toute l'image
+                            project.title === "Models" ? 'object-contain bg-black' : 'object-cover'
+                        }`} 
+                    />
                 </div>
             ))}
         </div>
@@ -366,11 +432,11 @@ const Hero = () => (
       <p className="text-slate-400 text-sm tracking-[0.3em] uppercase animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
       </p>
       <h1 className="text-5xl md:text-8xl lg:text-9xl font-light font-serif leading-tight animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-        <span className="italic block text-slate-500 text-4xl md:text-6xl mb-2">Recherche active de stage</span>
+        <span className="italic block text-slate-500 text-4xl md:text-6xl mb-2"></span>
         PORTFOLIO 
       </h1>
       <p className="max-w-xl mx-auto text-slate-300 font-light text-lg md:text-xl leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
-        Étudiante créative naviguant à la frontière du <span className="text-white font-normal">Design</span>, du <span className="text-white font-normal">Développement</span> et de la <span className="text-white font-normal">Photographie</span>.
+        Étudiante créative naviguant à la frontière du <span className="text-white font-normal">Design</span>, du <span className="text-white font-normal">Développement</span> et de la <span className="text-white font-normal">Photographie</span> En recherche active de stage.
       </p>
     </div>
     <div className="absolute bottom-10 z-20 animate-bounce animate-fade-in-up" style={{ animationDelay: '1s' }}>
@@ -532,9 +598,9 @@ const Contact = () => (
         <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
       </a>
       <div className="flex justify-center gap-8 mt-20">
-        <a href="#" className="text-slate-500 hover:text-white transition-colors"><Linkedin className="w-5 h-5" /></a>
-        <a href="#" className="text-slate-500 hover:text-white transition-colors"><Instagram className="w-5 h-5" /></a>
-        <a href="#" className="text-slate-500 hover:text-white transition-colors"><Code className="w-5 h-5" /></a>
+        <a href="https://www.linkedin.com/in/ibtissam-chtioui" className="text-slate-500 hover:text-white transition-colors"><Linkedin className="w-5 h-5" /></a>
+        <a href="https://www.instagram.com/ibbt.c/" className="text-slate-500 hover:text-white transition-colors"><Instagram className="w-5 h-5" /></a>
+        <a href="https://github.com/IbtissamCTI" className="text-slate-500 hover:text-white transition-colors"><Code className="w-5 h-5" /></a>
       </div>
       <div className="mt-20 text-xs text-slate-700 uppercase tracking-widest">
       </div>

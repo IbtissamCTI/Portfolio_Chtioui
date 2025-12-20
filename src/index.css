@@ -1,1 +1,30 @@
-@import "tailwindcss";
+/* 1. Import des polices */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* 2. Directives Tailwind (C'EST ÇA QUI EST IMPORTANT) */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 3. Animations & Styles */
+@layer utilities {
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #050A19; }
+::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+
+body {
+  cursor: none;
+  background-color: #050A19;
+  color: #F1F5F9;
+  overflow-x: hidden;
+}
