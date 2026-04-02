@@ -28,6 +28,61 @@ const GlobalStyles = () => (
       overflow-x: hidden;
       cursor: none;
     }
+
+    ::selection { background: #1A1815; color: #F5F2EE; }
+
+    /* ---- Palette taupe/beige/noir ---- */
+    .p-bg       { background-color: #F5F2EE; }
+    .p-bg-alt   { background-color: #EDEAE4; }
+    .p-bg-card  { background-color: #E8E4DE; }
+
+    .p-text-1   { color: #1A1815; }
+    .p-text-2   { color: #6B6560; }
+    .p-text-3   { color: #9C9490; }
+    .p-text-4   { color: #B8B2AC; }
+
+    .p-border   { border-color: #D4CEC8; }
+
+    /* Navbar */
+    .p-nav { background-color: rgba(245,242,238,0.85); border-color: rgba(212,206,200,0.5); }
+
+    /* Bouton principal (noir) */
+    .p-btn-dark { background-color: #1A1815; color: #F5F2EE; }
+    .p-btn-dark:hover { background-color: #3A3530; }
+
+    /* Bouton outline */
+    .p-btn-outline { border-color: #D4CEC8; background-color: #ffffff; color: #4A4540; }
+    .p-btn-outline:hover { background-color: #1A1815; color: #F5F2EE; border-color: #1A1815; }
+
+    /* Badge tech */
+    .p-badge { background-color: #E8E4DE; border-color: #D4CEC8; color: #4A4540; }
+
+    /* Carte projet */
+    .p-card { background-color: rgba(232,228,222,0.5); border-color: #D4CEC8; }
+    .p-card-tag { background-color: rgba(255,255,255,0.35); border-color: rgba(26,24,21,0.15); color: #1A1815; }
+
+    /* Fenêtre code */
+    .p-code-win { background-color: #E8E4DE; border-color: #D4CEC8; }
+    .p-code-dot { background-color: #C4BEB8; }
+
+    /* Panel design */
+    .p-panel { background-color: #E8E4DE; }
+
+    /* Icônes sociales */
+    .p-social { color: #9C9490; }
+    .p-social:hover { color: #1A1815; }
+
+    /* Filtres */
+    .p-filter { color: #9C9490; border-color: transparent; border-bottom-width: 1px; border-bottom-style: solid; }
+    .p-filter:hover { color: #6B6560; }
+    .p-filter.active { color: #1A1815; border-color: #1A1815; }
+
+    /* Curseur */
+    .p-cursor-dot  { background-color: #1A1815; }
+    .p-cursor-ring { border-color: rgba(107,101,96,0.5); }
+
+    /* Education hover */
+    .p-edu-row:hover { background-color: rgba(237,234,228,0.5); }
   `}</style>
 );
 
@@ -52,7 +107,7 @@ const projectsData = [
       "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1000&auto=format&fit=crop"
     ]
   },
- { 
+  { 
     id: 1,
     title: "Projet HARIBIO",
     category: "Data Viz & Gestion", 
@@ -68,10 +123,7 @@ const projectsData = [
       "Traitement et parsing de fichiers de données (CSV/Excel)",
       "Pilotage d'équipe (4 pers.) et méthode Agile (Trello)"
     ],
-    gallery: [
-      "/Images/dev22.png", 
-      "/Images/dev222.png"
-    ]
+    gallery: ["/Images/dev22.png", "/Images/dev222.png"]
   },
   { 
     id: 2,
@@ -86,10 +138,7 @@ const projectsData = [
     challenge: "Créer un visuel impactant et un mockup réaliste pour un produit de grande consommation.",
     colors: ["#6c1721", "#356867", "#e2d85c"],
     typo: "Display IBM PLEX / Sans Condensed",
-    gallery: [
-      "/Images/soda1.png",
-      "/Images/soda1.png"
-    ]
+    gallery: ["/Images/soda1.png", "/Images/soda1.png"]
   },
   { 
     id: 3,
@@ -104,9 +153,7 @@ const projectsData = [
     challenge: "Intégration réaliste d'éléments photographiques dans une interface graphique rétro.",
     colors: ["#000080", "#C0C0C0", "#000000"],
     typo: "Pixel Art / System",
-    gallery: [
-      "/Images/exe.png"
-    ]
+    gallery: ["/Images/exe.png"]
   },
   { 
     id: 4,
@@ -121,10 +168,7 @@ const projectsData = [
     challenge: "Créer un visuel accrocheur pour les réseaux sociaux autour d'un concept futuriste.",
     colors: ["#b8351b", "#85a79b", "#FFFFFF"],
     typo: "Futuristic / Experimental",
-    gallery: [
-      "/Images/POSTINSTA.png",
-      "/Images/POSTINSTA.png"
-    ]
+    gallery: ["/Images/POSTINSTA.png", "/Images/POSTINSTA.png"]
   },
   { 
     id: 5,
@@ -136,13 +180,8 @@ const projectsData = [
     size: "normal",
     description: "Photos de models pour certaines occasions.",
     gallery: [
-      "/Images/photo1.jpg",
-      "/Images/last.png",
-      "/Images/photoig.jpg",
-      "/Images/photo2.JPG",
-      "/Images/last1.jpg",
-      "/Images/photomodel.jpg",
-      "/Images/pic.jpg",
+      "/Images/photo1.jpg", "/Images/last.png", "/Images/photoig.jpg",
+      "/Images/photo2.JPG", "/Images/last1.jpg", "/Images/photomodel.jpg", "/Images/pic.jpg",
     ],
     camera: "Lumix hybrid/Canon 500D"
   },
@@ -156,11 +195,8 @@ const projectsData = [
     size: "large",
     description: "À travers l'objectif, les géométries et formes qui nous entourent.",
     gallery: [
-      "/Images/lens3.JPG",
-      "/Images/lens2.JPG",
-      "/Images/lens4.JPG",
-      "/Images/lens5.JPG",
-      "/Images/lens1.JPG",
+      "/Images/lens3.JPG", "/Images/lens2.JPG", "/Images/lens4.JPG",
+      "/Images/lens5.JPG", "/Images/lens1.JPG",
     ],
     camera: "Lumix hybrid/Canon 500D"
   },
@@ -186,8 +222,8 @@ const CustomCursor = () => {
 
   return (
     <>
-      <div ref={cursorRef} className="fixed top-0 left-0 w-2 h-2 bg-stone-900 rounded-full pointer-events-none z-[100] -mt-1 -ml-1 hidden md:block" />
-      <div ref={followerRef} className="fixed top-0 left-0 w-8 h-8 border border-stone-400/50 rounded-full pointer-events-none z-[99] -mt-4 -ml-4 transition-transform duration-100 ease-out hidden md:block" />
+      <div ref={cursorRef} className="p-cursor-dot fixed top-0 left-0 w-2 h-2 rounded-full pointer-events-none z-[100] -mt-1 -ml-1 hidden md:block" />
+      <div ref={followerRef} className="p-cursor-ring fixed top-0 left-0 w-8 h-8 border rounded-full pointer-events-none z-[99] -mt-4 -ml-4 transition-transform duration-100 ease-out hidden md:block" />
     </>
   );
 };
@@ -196,9 +232,9 @@ const CustomCursor = () => {
    BARRE DE NAVIGATION
    ====================================================================================== */
 const Navbar = ({ onHomeClick, isProjectOpen }) => (
-  <nav className="fixed top-0 w-full p-8 flex justify-between items-center z-40 bg-[#F5F2EE]/80 backdrop-blur-sm border-b border-stone-200/60">
+  <nav className="p-nav fixed top-0 w-full p-8 flex justify-between items-center z-40 border-b backdrop-blur-sm">
     <div 
-      className="text-xl font-serif italic font-bold tracking-wider cursor-pointer text-stone-900 hover:text-stone-500 transition-colors"
+      className="p-text-1 text-xl font-serif italic font-bold tracking-wider cursor-pointer hover:opacity-70 transition-opacity"
       onClick={onHomeClick}
     >
       Ibtissem Chtioui.
@@ -206,203 +242,189 @@ const Navbar = ({ onHomeClick, isProjectOpen }) => (
     
     <div className="flex items-center gap-8">
       {!isProjectOpen && (
-        <div className="hidden md:flex gap-8 text-sm font-light tracking-widest uppercase text-stone-600">
-          <a href="#work" className="hover:text-stone-900 transition-colors">Projets</a>
-          <a href="#about" className="hover:text-stone-900 transition-colors">A Propos</a>
-          <a href="#contact" className="hover:text-stone-900 transition-colors">Contact</a>
+        <div className="hidden md:flex gap-8 text-sm font-light tracking-widest uppercase">
+          <a href="#work" className="p-text-2 hover:opacity-70 transition-opacity">Projets</a>
+          <a href="#about" className="p-text-2 hover:opacity-70 transition-opacity">A Propos</a>
+          <a href="#contact" className="p-text-2 hover:opacity-70 transition-opacity">Contact</a>
         </div>
       )}
       
       {isProjectOpen && (
-         <button onClick={onHomeClick} className="flex items-center gap-2 text-sm uppercase tracking-widest text-stone-600 hover:text-stone-900 transition-colors">
-           <ArrowLeft className="w-4 h-4" /> Retour
-         </button>
+        <button onClick={onHomeClick} className="p-text-2 flex items-center gap-2 text-sm uppercase tracking-widest hover:opacity-70 transition-opacity">
+          <ArrowLeft className="w-4 h-4" /> Retour
+        </button>
       )}
 
       <a 
         href="mailto:Ibtissem.chti@hotmail.com"
-        className="flex items-center gap-2 px-5 py-2 rounded-full border border-stone-300 bg-white hover:bg-stone-50 hover:border-stone-400 transition-all text-sm uppercase tracking-wider text-stone-700 group"
+        className="p-btn-outline flex items-center gap-2 px-5 py-2 rounded-full border transition-all text-sm uppercase tracking-wider group"
       >
-        <Mail className="w-4 h-4 text-stone-500 group-hover:text-stone-800 transition-colors" />
+        <Mail className="w-4 h-4" />
         <span className="hidden md:inline">Me contacter</span>
       </a>
     </div>
   </nav>
 );
 
-
 /* ======================================================================================
    LAYOUTS PROJETS
    ====================================================================================== */
 
 const DesignLayout = ({ project }) => (
-  <div className="pt-32 pb-20 px-6 max-w-7xl mx-auto animate-fade-in-up">
+  <div className="p-bg pt-32 pb-20 px-6 max-w-7xl mx-auto animate-fade-in-up">
     <div className="grid md:grid-cols-2 gap-16 mb-24">
       <div className="space-y-8">
-        <span className="text-xs font-light tracking-[0.2em] text-stone-500 uppercase">Case Study Design</span>
-        <h1 className="text-6xl md:text-8xl font-serif italic leading-none text-stone-900">{project.title}</h1>
-        <div className="h-px w-24 bg-stone-300"></div>
-        <p className="text-xl text-stone-600 font-light leading-relaxed">{project.description}</p>
-        
+        <span className="p-text-3 text-xs font-light tracking-[0.2em] uppercase">Case Study Design</span>
+        <h1 className="p-text-1 text-6xl md:text-8xl font-serif italic leading-none">{project.title}</h1>
+        <div className="h-1 w-24 p-border" style={{borderTopWidth:0, height:'1px', backgroundColor:'#D4CEC8'}}></div>
+        <p className="p-text-2 text-xl font-light leading-relaxed">{project.description}</p>
         <div className="pt-8">
-            <h3 className="text-sm uppercase tracking-widest text-stone-400 mb-4 font-serif">Le Challenge</h3>
-            <p className="text-stone-500 font-light">{project.challenge}</p>
+          <h3 className="p-text-3 text-sm uppercase tracking-widest mb-4 font-serif">Le Challenge</h3>
+          <p className="p-text-2 font-light">{project.challenge}</p>
         </div>
       </div>
       <div className="relative aspect-[3/4] md:aspect-auto">
-         <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
-         <div className="absolute -bottom-6 -left-6 bg-[#F5F2EE] border border-stone-200 p-6 max-w-xs">
-            <h4 className="font-serif text-xl italic mb-2 text-stone-800">Outils</h4>
-            <div className="flex flex-wrap gap-2 text-xs text-stone-500">
-               {project.stack?.map((tool, i) => (
-                 <span key={i} className="border border-stone-300 px-2 py-1">{tool}</span>
-               ))}
-            </div>
-         </div>
+        <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+        <div className="p-bg p-border absolute -bottom-6 -left-6 border p-6 max-w-xs">
+          <h4 className="p-text-1 font-serif text-xl italic mb-2">Outils</h4>
+          <div className="flex flex-wrap gap-2 text-xs p-text-2">
+            {project.stack?.map((tool, i) => (
+              <span key={i} className="p-border border px-2 py-1">{tool}</span>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
 
-    <div className="grid md:grid-cols-2 gap-8 mb-24 bg-stone-100 p-12">
-        <div>
-            <h3 className="text-2xl font-serif italic mb-6 text-stone-800">Système Visuel</h3>
-            <div className="space-y-6">
-                <div>
-                    <span className="text-xs uppercase tracking-widest text-stone-400 block mb-2">Couleurs</span>
-                    <div className="flex gap-4">
-                        {project.colors?.map((c, i) => (
-                            <div key={i} className="w-12 h-12 rounded-full border border-stone-200 shadow-sm" style={{backgroundColor: c}}></div>
-                        ))}
-                    </div>
-                </div>
-                <div>
-                    <span className="text-xs uppercase tracking-widest text-stone-400 block mb-2">Typographie</span>
-                    <div className="text-3xl font-serif border-l-2 border-stone-300 pl-4 text-stone-700">{project.typo}</div>
-                </div>
+    <div className="p-panel grid md:grid-cols-2 gap-8 mb-24 p-12">
+      <div>
+        <h3 className="p-text-1 text-2xl font-serif italic mb-6">Système Visuel</h3>
+        <div className="space-y-6">
+          <div>
+            <span className="p-text-3 text-xs uppercase tracking-widest block mb-2">Couleurs</span>
+            <div className="flex gap-4">
+              {project.colors?.map((c, i) => (
+                <div key={i} className="p-border w-12 h-12 rounded-full border" style={{backgroundColor: c}}></div>
+              ))}
             </div>
+          </div>
+          <div>
+            <span className="p-text-3 text-xs uppercase tracking-widest block mb-2">Typographie</span>
+            <div className="p-text-2 p-border text-3xl font-serif border-l-2 pl-4">{project.typo}</div>
+          </div>
         </div>
-        <div className="flex items-center justify-center border border-dashed border-stone-300 text-stone-400 font-light italic overflow-hidden relative group">
-            {project.gallery && project.gallery[0] ? (
-              <img src={project.gallery[0]} alt="Aperçu" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
-            ) : (
-              <span>[ Aperçu des maquettes UI ]</span>
-            )}
-        </div>
+      </div>
+      <div className="p-border flex items-center justify-center border border-dashed p-text-3 font-light italic overflow-hidden relative group">
+        {project.gallery && project.gallery[0] ? (
+          <img src={project.gallery[0]} alt="Aperçu" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
+        ) : (
+          <span>[ Aperçu des maquettes UI ]</span>
+        )}
+      </div>
     </div>
   </div>
 );
 
 const DevLayout = ({ project }) => (
-  <div className="pt-32 pb-20 px-6 max-w-6xl mx-auto animate-fade-in-up">
-    <header className="mb-16 border-b border-stone-200 pb-12">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
-            <div>
-                <div className="flex items-center gap-2 text-stone-500 mb-4 text-xs font-mono uppercase tracking-widest">
-                    <Code className="w-4 h-4" /> Développement
-                </div>
-                <h1 className="text-5xl md:text-7xl font-serif font-bold mb-4 text-stone-900">{project.title}</h1>
-                <p className="text-stone-500 max-w-2xl text-lg">{project.description}</p>
-            </div>
-            <a href={project.link} target="_blank" rel="noreferrer" className="flex items-center gap-2 bg-stone-900 text-white px-6 py-3 text-sm font-medium hover:bg-stone-700 transition-colors">
-                <Github className="w-4 h-4" /> Voir le Code
-            </a>
+  <div className="p-bg pt-32 pb-20 px-6 max-w-6xl mx-auto animate-fade-in-up">
+    <header className="p-border mb-16 border-b pb-12">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+        <div>
+          <div className="p-text-2 flex items-center gap-2 mb-4 text-xs font-mono uppercase tracking-widest">
+            <Code className="w-4 h-4" /> Développement
+          </div>
+          <h1 className="p-text-1 text-5xl md:text-7xl font-serif font-bold mb-4">{project.title}</h1>
+          <p className="p-text-2 max-w-2xl text-lg">{project.description}</p>
         </div>
+        <a href={project.link} target="_blank" rel="noreferrer" className="p-btn-dark flex items-center gap-2 px-6 py-3 text-sm font-medium transition-colors">
+          <Github className="w-4 h-4" /> Voir le Code
+        </a>
+      </div>
     </header>
 
     <div className="grid md:grid-cols-3 gap-12">
-        <div className="md:col-span-1 space-y-12">
-            <div>
-                <h3 className="font-serif text-2xl italic mb-6 text-stone-800">Stack Technique</h3>
-                <div className="flex flex-wrap gap-2">
-                    {project.stack?.map((tech, i) => (
-                        <span key={i} className="text-xs font-mono text-stone-700 bg-stone-100 border border-stone-200 px-3 py-1 rounded">
-                            {tech}
-                        </span>
-                    ))}
-                </div>
-            </div>
-            
-            <div>
-                <h3 className="font-serif text-2xl italic mb-6 text-stone-800">Fonctionnalités</h3>
-                <ul className="space-y-3">
-                    {project.features?.map((feat, i) => (
-                        <li key={i} className="flex items-start gap-3 text-sm text-stone-500">
-                            <ArrowUpRight className="w-4 h-4 text-stone-300 mt-1 flex-shrink-0" />
-                            {feat}
-                        </li>
-                    ))}
-                </ul>
-            </div>
+      <div className="md:col-span-1 space-y-12">
+        <div>
+          <h3 className="p-text-1 font-serif text-2xl italic mb-6">Stack Technique</h3>
+          <div className="flex flex-wrap gap-2">
+            {project.stack?.map((tech, i) => (
+              <span key={i} className="p-badge text-xs font-mono border px-3 py-1 rounded">{tech}</span>
+            ))}
+          </div>
         </div>
+        <div>
+          <h3 className="p-text-1 font-serif text-2xl italic mb-6">Fonctionnalités</h3>
+          <ul className="space-y-3">
+            {project.features?.map((feat, i) => (
+              <li key={i} className="p-text-2 flex items-start gap-3 text-sm">
+                <ArrowUpRight className="w-4 h-4 mt-1 flex-shrink-0 p-text-4" style={{color:'#C4BEB8'}} />
+                {feat}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
 
-        <div className="md:col-span-2 space-y-8">
-            <div className="bg-stone-100 border border-stone-200 p-2 rounded-lg">
-                <div className="flex gap-2 mb-2 px-2">
-                    <div className="w-3 h-3 rounded-full bg-stone-300"></div>
-                    <div className="w-3 h-3 rounded-full bg-stone-300"></div>
-                    <div className="w-3 h-3 rounded-full bg-stone-300"></div>
-                </div>
-                <img src={project.image} alt="Interface" className="w-full rounded border border-stone-200 opacity-90" />
-            </div>
-            
-            <div className="grid grid-cols-2 gap-4">
-                 <div className="bg-stone-100 border border-stone-200 p-2 rounded-lg h-64 relative overflow-hidden group">
-                    <img 
-                        src={project.gallery && project.gallery[0] ? project.gallery[0] : project.image} 
-                        alt="Detail 1" 
-                        className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500" 
-                    />
-                 </div>
-                 <div className="bg-stone-100 border border-stone-200 p-2 rounded-lg h-64 relative overflow-hidden group">
-                    <img 
-                        src={project.gallery && project.gallery[1] ? project.gallery[1] : project.image} 
-                        alt="Detail 2" 
-                        className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500" 
-                    />
-                 </div>
-            </div>
+      <div className="md:col-span-2 space-y-8">
+        <div className="p-code-win border p-2 rounded-lg">
+          <div className="flex gap-2 mb-2 px-2">
+            <div className="p-code-dot w-3 h-3 rounded-full"></div>
+            <div className="p-code-dot w-3 h-3 rounded-full"></div>
+            <div className="p-code-dot w-3 h-3 rounded-full"></div>
+          </div>
+          <img src={project.image} alt="Interface" className="w-full rounded border opacity-90" style={{borderColor:'#D4CEC8'}} />
         </div>
+        <div className="grid grid-cols-2 gap-4">
+          <div className="p-code-win border p-2 rounded-lg h-64 relative overflow-hidden group">
+            <img src={project.gallery?.[0] ?? project.image} alt="Detail 1" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
+          </div>
+          <div className="p-code-win border p-2 rounded-lg h-64 relative overflow-hidden group">
+            <img src={project.gallery?.[1] ?? project.image} alt="Detail 2" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 );
 
 const PhotoLayout = ({ project }) => (
-  <div className="min-h-screen bg-[#F5F2EE] animate-fade-in-up">
+  <div className="p-bg min-h-screen animate-fade-in-up">
     <div className="h-[70vh] w-full relative">
-        <img src={project.image} alt={project.title} className="w-full h-full object-cover opacity-90" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#F5F2EE] via-transparent to-transparent"></div>
-        <div className="absolute bottom-12 left-6 md:left-12">
-            <span className="text-xs tracking-[0.3em] uppercase text-stone-500 mb-2 block">Série Photographique</span>
-            <h1 className="text-6xl md:text-9xl font-serif italic text-stone-900 mix-blend-multiply">{project.title}</h1>
-            <div className="flex items-center gap-4 mt-6 text-sm text-stone-500 font-light">
-                <span className="flex items-center gap-2"><Camera className="w-4 h-4" /> {project.camera}</span>
-                <span className="w-px h-4 bg-stone-300"></span>
-                <span>{project.year}</span>
-            </div>
+      <img src={project.image} alt={project.title} className="w-full h-full object-cover opacity-90" />
+      <div className="absolute inset-0" style={{background:'linear-gradient(to top, #F5F2EE, transparent)'}}></div>
+      <div className="absolute bottom-12 left-6 md:left-12">
+        <span className="p-text-3 text-xs tracking-[0.3em] uppercase mb-2 block">Série Photographique</span>
+        <h1 className="p-text-1 text-6xl md:text-9xl font-serif italic" style={{mixBlendMode:'multiply'}}>{project.title}</h1>
+        <div className="p-text-2 flex items-center gap-4 mt-6 text-sm font-light">
+          <span className="flex items-center gap-2"><Camera className="w-4 h-4" /> {project.camera}</span>
+          <span className="w-px h-4" style={{backgroundColor:'#D4CEC8'}}></span>
+          <span>{project.year}</span>
         </div>
+      </div>
     </div>
 
     <div className="max-w-7xl mx-auto px-6 py-24">
-        <p className="text-2xl font-light text-stone-600 max-w-2xl mb-24 leading-relaxed mx-auto text-center font-serif italic">
-            "{project.description}"
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {project.gallery?.map((img, i) => (
-                <div key={i} className={`relative group overflow-hidden ${
-                    project.title === "Models" 
-                    ? 'aspect-[3/4]'
-                    : (i % 3 === 0 ? 'md:col-span-2 aspect-[21/9]' : 'aspect-[4/5]')
-                }`}>
-                    <img 
-                        src={img} 
-                        alt="" 
-                        className={`w-full h-full transition-transform duration-1000 group-hover:scale-105 grayscale hover:grayscale-0 ${
-                            project.title === "Models" ? 'object-contain bg-stone-100' : 'object-cover'
-                        }`} 
-                    />
-                </div>
-            ))}
-        </div>
+      <p className="p-text-2 text-2xl font-light max-w-2xl mb-24 leading-relaxed mx-auto text-center font-serif italic">
+        "{project.description}"
+      </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {project.gallery?.map((img, i) => (
+          <div key={i} className={`relative group overflow-hidden ${
+            project.title === "Models"
+              ? 'aspect-[3/4]'
+              : (i % 3 === 0 ? 'md:col-span-2 aspect-[21/9]' : 'aspect-[4/5]')
+          }`}>
+            <img
+              src={img}
+              alt=""
+              className={`w-full h-full transition-transform duration-1000 group-hover:scale-105 grayscale hover:grayscale-0 ${
+                project.title === "Models" ? 'object-contain' : 'object-cover'
+              }`}
+              style={project.title === "Models" ? {backgroundColor:'#E8E4DE'} : {}}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   </div>
 );
@@ -412,48 +434,48 @@ const PhotoLayout = ({ project }) => (
    ====================================================================================== */
 
 const Hero = () => (
-  <header className="relative h-screen flex flex-col justify-center items-center px-6 overflow-hidden bg-[#F5F2EE]">
-    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#F5F2EE]/80 z-10" />
-    <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-stone-300/30 rounded-full blur-[100px]" />
-    <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-stone-200/40 rounded-full blur-[80px]" />
+  <header className="p-bg relative h-screen flex flex-col justify-center items-center px-6 overflow-hidden">
+    <div className="absolute inset-0 z-10" style={{background:'linear-gradient(to bottom, transparent, rgba(245,242,238,0.9))'}} />
+    <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full" style={{backgroundColor:'rgba(196,184,168,0.2)', filter:'blur(100px)'}} />
+    <div className="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full" style={{backgroundColor:'rgba(196,184,168,0.15)', filter:'blur(80px)'}} />
     <div className="z-20 text-center space-y-6 max-w-4xl">
-      <h1 className="text-5xl md:text-8xl lg:text-9xl font-light font-serif leading-tight text-stone-900 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-        <span className="italic block text-stone-400 text-4xl md:text-6xl mb-2"></span>
-        PORTFOLIO 
+      <p className="p-text-3 text-sm tracking-[0.3em] uppercase animate-fade-in-up" style={{ animationDelay: '0.1s' }}></p>
+      <h1 className="p-text-1 text-5xl md:text-8xl lg:text-9xl font-light font-serif leading-tight animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+        <span className="p-text-3 italic block text-4xl md:text-6xl mb-2"></span>
+        PORTFOLIO
       </h1>
-      <p className="max-w-xl mx-auto text-stone-500 font-light text-lg md:text-xl leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
-        Étudiante créative naviguant à la frontière du <span className="text-stone-900 font-normal">Design</span>, du <span className="text-stone-900 font-normal">Développement</span> et de la <span className="text-stone-900 font-normal">Photographie</span>. En recherche active de stage.
+      <p className="p-text-2 max-w-xl mx-auto font-light text-lg md:text-xl leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
+        Étudiante créative naviguant à la frontière du <span className="p-text-1" style={{fontWeight:400}}>Design</span>, du <span className="p-text-1" style={{fontWeight:400}}>Développement</span> et de la <span className="p-text-1" style={{fontWeight:400}}>Photographie</span> En recherche active de stage.
       </p>
     </div>
     <div className="absolute bottom-10 z-20 animate-bounce animate-fade-in-up" style={{ animationDelay: '1s' }}>
-      <ChevronDown className="w-6 h-6 text-stone-400" />
+      <ChevronDown className="p-text-3 w-6 h-6" />
     </div>
   </header>
 );
 
 const ProjectCard = ({ project, onClick }) => (
-  <div 
+  <div
     onClick={() => onClick(project)}
-    className={`group relative bg-stone-200/50 overflow-hidden border border-stone-200 ${project.size === 'large' ? 'md:col-span-2 md:row-span-2' : 'md:col-span-1 md:row-span-1'} aspect-[4/3] md:aspect-auto cursor-pointer`}
+    className={`p-card group relative overflow-hidden border ${project.size === 'large' ? 'md:col-span-2 md:row-span-2' : 'md:col-span-1 md:row-span-1'} aspect-[4/3] md:aspect-auto cursor-pointer`}
   >
-    <img 
-      src={project.image} 
-      alt={project.title} 
-      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-70 group-hover:opacity-50 grayscale group-hover:grayscale-0"
+    <img
+      src={project.image}
+      alt={project.title}
+      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60 group-hover:opacity-40 grayscale group-hover:grayscale-0"
     />
     <div className="absolute inset-0 p-6 flex flex-col justify-between z-10">
       <div className="flex justify-between items-start">
-        <span className="text-xs font-light tracking-widest uppercase border border-stone-900/20 px-2 py-1 rounded-full backdrop-blur-sm bg-white/30 text-stone-800">
+        <span className="p-card-tag text-xs font-light tracking-widest uppercase border px-2 py-1 rounded-full backdrop-blur-sm">
           {project.category}
         </span>
-        <span className="text-xs font-serif italic text-stone-600">{project.year}</span>
+        <span className="p-text-2 text-xs font-serif italic">{project.year}</span>
       </div>
-      
       <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-        <h3 className="text-2xl md:text-3xl font-serif italic mb-2 text-stone-900 group-hover:text-stone-700 transition-colors">
+        <h3 className="p-text-1 text-2xl md:text-3xl font-serif italic mb-2 transition-colors">
           {project.title}
         </h3>
-        <div className="flex items-center gap-2 text-xs tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-stone-600">
+        <div className="p-text-2 flex items-center gap-2 text-xs tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-500">
           Voir le projet <ArrowUpRight className="w-3 h-3" />
         </div>
       </div>
@@ -469,15 +491,15 @@ const WorkSection = ({ onProjectClick }) => {
     <section id="work" className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
       <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
         <div>
-          <h2 className="text-4xl md:text-5xl font-serif mb-4 text-stone-900">Œuvres Sélectionnées</h2>
-          <p className="text-stone-500 font-light max-w-md">Une collection d'expérimentations visuelles et techniques.</p>
+          <h2 className="p-text-1 text-4xl md:text-5xl font-serif mb-4">Œuvres Sélectionnées</h2>
+          <p className="p-text-2 font-light max-w-md">Une collection d'expérimentations visuelles et techniques.</p>
         </div>
         <div className="flex gap-4 text-sm font-light">
           {['all', 'dev', 'design', 'photo'].map((cat) => (
-            <button 
+            <button
               key={cat}
               onClick={() => setFilter(cat)}
-              className={`uppercase tracking-widest pb-1 border-b transition-all ${filter === cat ? 'border-stone-900 text-stone-900' : 'border-transparent text-stone-400 hover:text-stone-600'}`}
+              className={`p-filter uppercase tracking-widest pb-1 transition-all ${filter === cat ? 'active' : ''}`}
             >
               {cat === 'all' ? 'Tout' : cat}
             </button>
@@ -494,35 +516,33 @@ const WorkSection = ({ onProjectClick }) => {
 };
 
 const EducationItem = ({ year, title, school, description }) => (
-  <div className="relative pl-8 md:pl-0 md:grid md:grid-cols-12 gap-8 py-8 border-b border-stone-200 group hover:bg-stone-50 transition-colors">
-    <div className="absolute left-0 top-10 w-2 h-2 bg-stone-300 rounded-full md:hidden"></div>
-    <div className="md:col-span-3 text-stone-400 font-light tracking-widest">{year}</div>
+  <div className="p-edu-row p-border relative pl-8 md:pl-0 md:grid md:grid-cols-12 gap-8 py-8 border-b transition-colors">
+    <div className="absolute left-0 top-10 w-2 h-2 rounded-full md:hidden" style={{backgroundColor:'#C4BEB8'}}></div>
+    <div className="p-text-3 md:col-span-3 font-light tracking-widest">{year}</div>
     <div className="md:col-span-4 mb-2 md:mb-0">
-      <h4 className="text-xl font-serif text-stone-900">{title}</h4>
-      <span className="text-sm text-stone-400 uppercase tracking-wider">{school}</span>
+      <h4 className="p-text-1 text-xl font-serif">{title}</h4>
+      <span className="p-text-4 text-sm uppercase tracking-wider">{school}</span>
     </div>
-    <div className="md:col-span-5 text-stone-500 font-light text-sm leading-relaxed">
-      {description}
-    </div>
+    <div className="p-text-2 md:col-span-5 font-light text-sm leading-relaxed">{description}</div>
   </div>
 );
 
 const AboutSection = () => (
-  <section id="about" className="py-24 bg-[#EDEAE4]">
+  <section id="about" className="p-bg-alt py-24">
     <div className="max-w-6xl mx-auto px-6 md:px-12">
       <div className="grid md:grid-cols-2 gap-16 items-start">
         <div className="space-y-8 sticky top-24">
-          <h2 className="text-4xl md:text-5xl font-serif leading-tight text-stone-900">
-            Étudiante MMI,<br/> 
-            <span className="italic text-stone-400">Passionnée du détail.</span>
+          <h2 className="p-text-1 text-4xl md:text-5xl font-serif leading-tight">
+            Étudiante MMI,<br/>
+            <span className="p-text-3 italic">Passionnée du détail.</span>
           </h2>
-          <p className="text-stone-600 font-light leading-relaxed text-lg">
+          <p className="p-text-2 font-light leading-relaxed text-lg">
             Actuellement en 3ème année de BUT Métiers du Multimédia et de l'Internet. Mon approche est hybride : je code avec l'œil d'un designer et je design avec la logique d'un développeur.
           </p>
           <div className="grid grid-cols-2 gap-6 pt-8">
             <div>
-              <h3 className="text-stone-700 border-b border-stone-300 pb-2 mb-4 uppercase tracking-widest text-xs font-serif">Design</h3>
-              <ul className="space-y-2 text-stone-500 font-light text-sm">
+              <h3 className="p-text-1 p-border border-b pb-2 mb-4 uppercase tracking-widest text-xs font-serif">Design</h3>
+              <ul className="space-y-2 p-text-2 font-light text-sm">
                 <li>UI/UX Design</li>
                 <li>Direction Artistique</li>
                 <li>Photographie</li>
@@ -530,8 +550,8 @@ const AboutSection = () => (
               </ul>
             </div>
             <div>
-              <h3 className="text-stone-700 border-b border-stone-300 pb-2 mb-4 uppercase tracking-widest text-xs font-serif">Tech</h3>
-              <ul className="space-y-2 text-stone-500 font-light text-sm">
+              <h3 className="p-text-1 p-border border-b pb-2 mb-4 uppercase tracking-widest text-xs font-serif">Tech</h3>
+              <ul className="space-y-2 p-text-2 font-light text-sm">
                 <li>HTML/CSS - React.js - Angular - PHP - ChartJS - SpringBoot</li>
                 <li>Tailwind CSS</li>
                 <li>Creative Coding</li>
@@ -540,23 +560,23 @@ const AboutSection = () => (
           </div>
         </div>
         <div>
-          <h3 className="text-xs uppercase tracking-widest text-stone-400 mb-8 flex items-center gap-2">
+          <h3 className="p-text-3 text-xs uppercase tracking-widest mb-8 flex items-center gap-2">
             <GraduationCap className="w-4 h-4" /> Parcours Académique
           </h3>
-          <div className="border-l border-stone-200 md:border-none pl-4 md:pl-0">
-            <EducationItem 
+          <div className="p-border border-l md:border-none pl-4 md:pl-0">
+            <EducationItem
               year="2025 - PRÉSENT"
               title="BUT MMI (3ème Année)"
               school="IUT de Marne la Vallée (Antenne de MEAUX)"
               description="Spécialisation Développement Web & Design. Gestion de projets agile, UX Research avancée et développement Fullstack."
             />
-            <EducationItem 
+            <EducationItem
               year="2023 - 2025"
               title="BUT MMI (1ère & 2ème Année)"
               school="IUT de Marne la Vallée (Antenne de MEAUX)"
               description="Apprentissage des fondamentaux : Intégration web, design graphique, communication numérique et audiovisuel."
             />
-            <EducationItem 
+            <EducationItem
               year="2023"
               title="Baccalauréat Général"
               school="Lycée Général Léonard de Vinci Branly"
@@ -570,28 +590,31 @@ const AboutSection = () => (
 );
 
 const Contact = () => (
-  <footer id="contact" className="py-32 px-6 border-t border-stone-200 relative overflow-hidden bg-[#F5F2EE]">
+  <footer id="contact" className="p-bg p-border py-32 px-6 border-t relative overflow-hidden">
     <div className="max-w-4xl mx-auto text-center relative z-10">
-      <h2 className="text-5xl md:text-7xl font-serif italic mb-8 text-stone-900 hover:text-stone-500 transition-colors cursor-pointer">
+      <h2 className="p-text-1 text-5xl md:text-7xl font-serif italic mb-8 hover:opacity-60 transition-opacity cursor-pointer">
         Collaborons.
       </h2>
-      <p className="text-stone-500 font-light mb-12 text-lg">
+      <p className="p-text-2 font-light mb-12 text-lg">
         Toujours ouvert aux stages et aux projets freelance audacieux.
       </p>
-      <a href="mailto:hello@monportfolio.fr" className="inline-flex items-center gap-3 border border-stone-300 bg-white px-8 py-4 rounded-full text-sm uppercase tracking-widest text-stone-700 hover:bg-stone-900 hover:text-white hover:border-stone-900 transition-all duration-300 group">
+      <a href="mailto:hello@monportfolio.fr" className="p-btn-outline inline-flex items-center gap-3 border px-8 py-4 rounded-full text-sm uppercase tracking-widest transition-all duration-300 group">
         <Mail className="w-4 h-4" /> Me contacter
         <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
       </a>
       <div className="flex justify-center gap-8 mt-20">
-        <a href="https://www.linkedin.com/in/ibtissam-chtioui" className="text-stone-400 hover:text-stone-900 transition-colors"><Linkedin className="w-5 h-5" /></a>
-        <a href="https://www.instagram.com/ibbt.c/" className="text-stone-400 hover:text-stone-900 transition-colors"><Instagram className="w-5 h-5" /></a>
-        <a href="https://github.com/IbtissamCTI" className="text-stone-400 hover:text-stone-900 transition-colors"><Code className="w-5 h-5" /></a>
+        <a href="https://www.linkedin.com/in/ibtissam-chtioui" className="p-social transition-colors"><Linkedin className="w-5 h-5" /></a>
+        <a href="https://www.instagram.com/ibbt.c/" className="p-social transition-colors"><Instagram className="w-5 h-5" /></a>
+        <a href="https://github.com/IbtissamCTI" className="p-social transition-colors"><Code className="w-5 h-5" /></a>
       </div>
+      <div className="p-text-4 mt-20 text-xs uppercase tracking-widest"></div>
     </div>
   </footer>
 );
 
-
+/* ======================================================================================
+   APP
+   ====================================================================================== */
 const App = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
@@ -610,14 +633,17 @@ const App = () => {
   };
 
   return (
-    <div className="bg-[#F5F2EE] min-h-screen text-stone-900 selection:bg-stone-900 selection:text-white font-sans cursor-none overflow-x-hidden">
+    <div className="p-bg min-h-screen p-text-1 font-sans cursor-none overflow-x-hidden">
       <GlobalStyles />
-      
+
+      {/* Texture de bruit */}
+      <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-50 opacity-[0.03] bg-[url('data:image/svg+xml,%3Csvg%20viewBox%3D%270%200%20200%20200%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cfilter%20id%3D%27noiseFilter%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%270.65%27%20numOctaves%3D%273%27%20stitchTiles%3D%27stitch%27%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20filter%3D%27url%28%23noiseFilter%29%27%2F%3E%3C%2Fsvg%3E')]"></div>
+
       <CustomCursor />
-      
-      <Navbar 
-        onHomeClick={() => setSelectedProject(null)} 
-        isProjectOpen={!!selectedProject} 
+
+      <Navbar
+        onHomeClick={() => setSelectedProject(null)}
+        isProjectOpen={!!selectedProject}
       />
 
       <main>
